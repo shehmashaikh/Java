@@ -1,0 +1,50 @@
+package assignment1;
+
+/* 
+Name : Shehma Shaikh
+Section : 10
+Student ID : 040811051
+ Lab Teacher : JIEHAN ZHOU 
+ */
+
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
+public class Assign1 {
+	public static void main(String s[]) {
+		Scanner input = new Scanner(System.in);
+		System.out.println("Gingerbread Cookies with Royal Icing");
+		System.out.println(" How many Cookies do you want to make ?");
+		int sugar = 1;
+		int egg = 1;
+		double cup_flour = 0.50;
+		double butter = 0.25;
+		int pieSpice = 2;
+		int ginger = 1;
+
+		try {
+			int numOfCookies = input.nextInt();
+			if (numOfCookies > 0) {
+
+				System.out.println(" 1) Add " + numOfCookies * sugar
+						+ " package sugar cookie mix");
+				System.out.println(" 2) Add " + numOfCookies * egg + " egg");
+				System.out.println(" 3) Mix " + numOfCookies * cup_flour
+						+ " cup all-purpose flour");
+				System.out.println(" 4) Mix " + numOfCookies * butter
+						+ " cup melted butter");
+				System.out.println(" 5) Add " + numOfCookies * pieSpice
+						+ " tablespoons pumpkin pie spice");
+				System.out.println(" 6) Add " + numOfCookies * ginger
+						+ " teaspoon ground ginger");
+			} else {
+				System.out
+						.println("Invalid Input : Number of Cookies should be greater than 0.");
+			}
+		} catch (InputMismatchException e) {
+			System.out.println("Invalid Input : Please Enter the valid number of Cookies");
+		}
+
+	}
+
+}
